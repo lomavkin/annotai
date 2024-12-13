@@ -1,0 +1,12 @@
+[package]
+name = "annotai"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.94"
+async-openai = "0.26.0"
+base64 = "0.22.1"
+ffmpeg-next = "7.1.0"
+image = "0.25.5"
+tokio = { version = "1.42.0", features = ["full"] }
