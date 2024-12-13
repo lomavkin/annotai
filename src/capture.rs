@@ -15,9 +15,9 @@ pub(crate) fn init() {
 }
 pub(crate) fn capture_base64(
     input_path: &str,
-    start_ms: i32,
-    duration_ms: i32,
-    interval_ms: i32,
+    start_ms: u32,
+    duration_ms: u32,
+    interval_ms: u32,
 ) -> anyhow::Result<Vec<String>> {
     use base64::prelude::BASE64_STANDARD;
 
