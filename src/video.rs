@@ -527,7 +527,7 @@ pub(crate) fn transcode(
 
     let overlay_audio_filter_spec = if fs::exists(overlay_audio_path)? {
         format!(
-            "amovie={},volume=0.8,atempo=1.5 [ov]; [in][ov] amix=inputs=2:duration=shortest [out]",
+            "amovie={},atempo=1.25,volume=1.2 [ov]; [in]volume=0.8 [in_vol]; [in_vol][ov] amix=inputs=2:duration=shortest [out]",
             overlay_audio_path
                 .to_str()
                 .ok_or(anyhow::anyhow!("Invalid comment audio path"))?
